@@ -26,6 +26,21 @@
         d: "mm",
       })
  ```
- ### 使用jsonwebtoken
+ ### 使用jsonwebtoken生成token
   - cnpm i jsonwebtoken -S 安装使用
-  - jwt.sign("规则","加密名字","过期时间","箭头函数");
+  - jwt.sign("规则","加密名字","过期时间","箭头函数"); 用来生成token
+  ```
+   const rule = {id:user.id,name:user.name};
+        jwt.sign(rule,keys.secretOrKey,{expiresIn:3600},(err,token)=>{
+          if(err) throw err;
+          res.json({
+            success:true,
+            token:"mrwu" + token
+          });
+        })
+  ```
+
+
+  ### 验证token
+   - cnpm i passport-jwt passport -S 安装依赖包
+   - 具体使用请前往查看npm官方网站
