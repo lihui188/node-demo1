@@ -17,3 +17,15 @@
  - 安装加密包
   + cnpm i bcrypt -S
   +  bcrypt.genSalt方法进行加密
+### 使用全球公认头像
+ - npm i gravatar -S 使用
+ ```
+ const avatar = gravatar.url(req.body.email, {
+        s: "200",
+        r: "pg",
+        d: "mm",
+      })
+ ```
+ ### 使用jsonwebtoken
+  - cnpm i jsonwebtoken -S 安装使用
+  - jwt.sign("规则","加密名字","过期时间","箭头函数");
