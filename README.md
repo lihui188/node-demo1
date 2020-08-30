@@ -26,7 +26,7 @@
         d: "mm",
       })
  ```
- ### 使用jsonwebtoken生成token
+### 使用jsonwebtoken生成token
   - cnpm i jsonwebtoken -S 安装使用
   - jwt.sign("规则","加密名字","过期时间","箭头函数"); 用来生成token
   ```
@@ -41,6 +41,12 @@
   ```
 
 
-  ### 验证token
+### 验证token
    - cnpm i passport-jwt passport -S 安装依赖包
    - 具体使用请前往查看npm官方网站
+
+
+### 编写接口增删改查接口
+
+### 启动连载
+ - cnpm i concurrently -D 一起启动服务端和前端
