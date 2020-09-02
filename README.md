@@ -50,3 +50,4 @@
 
 ### 启动连载
  - cnpm i concurrently -D 一起启动服务端和前端
+ - "dev":"concurrent \"npm run server\" \"npm run client\"" 前后端进行连载
