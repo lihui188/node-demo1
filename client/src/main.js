@@ -6,7 +6,8 @@ import App from './App.vue'
 
 import router from './router'
 import store from './store'
-
+import axios from './http'
+Vue.prototype.$axios = axios;
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 

@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Index from '../views/Index.vue'
 import Register from '../views/Register.vue'
-import Noexist from '../views/404.vue'
+import NoExist from '../views/404.vue'
+import Login from '../views/Login.vue'
 Vue.use(VueRouter)
 
   const routes = [
@@ -17,11 +18,15 @@ Vue.use(VueRouter)
     path:'/register',
     name:'register',
     component:Register
+  },{
+    path:'/login',
+    name:'login',
+    component:Login
   }
   ,{
     path:'*',
     name:'noexist',
-    component:Noexist
+    component:NoExist
   }
 ]
 
