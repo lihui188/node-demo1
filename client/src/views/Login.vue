@@ -36,6 +36,7 @@
             >
           </el-form-item>
         </el-form>
+        <div class="text-right">你好</div>
       </div>
     </section>
   </div>
@@ -94,33 +95,5 @@ export default {
 }
 </script>
 <style scoped>
-.login {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: url("../assets/images/bg.jpg") no-repeat center center;
-  background-size: 100% 100%;
-}
-.form-container {
-  width: 370px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.8);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0px 0px 10px 3px #fff;
-}
-.form-container .manage_tip {
-  margin: 20px;
-  text-align: center;
-  color: #000;
-}
-.form-container .manage_tip .title {
-  font-family: "Microsoft YaHei";
-  font-weight: bold;
-}
-.submit-btn {
-  width: 100%;
-}
+
 </style>

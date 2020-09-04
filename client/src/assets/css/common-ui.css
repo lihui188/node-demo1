@@ -1,0 +1,351 @@
+.widthPercent100{
+	width: 100%;
+}
+
+.padding0{
+	padding: 0upx !important;
+}
+
+.padding-right-0 {
+	padding-right: 0upx !important;
+}
+
+.padding-right-10 {
+	padding-right: 10upx;
+}
+
+.padding-right-20 {
+	padding-right: 20upx;
+}
+
+.padding-right-120 {
+	padding-right: 120upx;
+}
+
+.padding-top-0{
+	padding-top: 0upx !important;
+}
+.padding-top-10{
+	padding-top: 10upx !important;
+}
+.padding-top-20 {
+	padding-top: 20upx !important;
+}
+
+.padding-top-40 {
+	padding-top: 40upx !important;
+}
+
+.padding-top-60 {
+	padding-top: 60upx;
+}
+
+.padding-top-430{
+	padding-top: 430upx;
+}
+
+.padding-bottom-0 {
+	padding-bottom: 0upx !important;
+}
+.padding-bottom-10 {
+	padding-bottom: 10upx !important;
+}
+.padding-bottom-20 {
+	padding-bottom: 20upx !important;
+}
+
+.padding-left-60 {
+	padding-left: 60upx !important;
+}
+
+.padding-left-40 {
+	padding-left: 40upx !important;
+}
+.padding-left-20 {
+	padding-left: 20upx !important;
+}
+.margin{
+	margin: 28upx;
+}
+
+.margin-0{
+	margin:0;
+}
+
+.margin-top-10 {
+	margin-top: 10upx !important;
+}
+
+.margin-top-20 {
+	margin-top: 20upx !important;
+}
+
+.margin-top-100 {
+	margin-top: 100upx !important;
+}
+
+.margin-left-10 {
+	margin-left: 10upx !important;
+}
+
+.margin-right-10 {
+	margin-right: 10upx !important;
+}
+
+.margin-right-20 {
+	margin-right: 20upx !important;
+}
+
+.margin-right-30 {
+	margin-right: 30upx !important;
+}
+
+.margin-bottom-0{
+	margin-bottom: 0upx !important;
+}
+
+.margin-bottom-10 {
+	margin-bottom: 10upx !important;
+}
+
+.margin-bottom-20 {
+	margin-bottom: 20upx !important;
+}
+
+.margin-bottom-100 {
+	margin-bottom: 100upx !important;
+}
+
+.weightBold {
+	font-weight: bold;
+}
+
+.box:after{
+   content:'';
+   width:0;
+   height:100%;
+   display:inline-block;
+   vertical-align:middle;
+}
+
+.middle{
+	vertical-align:middle;
+	display:inline-block;
+}
+
+.boxBottom{
+	vertical-align:bottom;
+	display:inline-block;
+}
+
+.ellipsis{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ellipsis2{
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	display:-webkit-box; 
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2; 
+}
+
+.clearfix:after{
+	display: block;
+	visibility: hidden;
+	height: 0;
+	content: "";
+	clear: both;
+}
+
+.clearfix{
+	zoom: 1;
+}
+
+.none{
+	display: none;
+}
+
+.pull-left{
+	float: left;
+}
+
+.pull-right{
+	float: right;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-right{
+	text-align: right;
+}
+
+.text-white-space{
+	white-space: pre-line;
+}
+.normal-white-space{
+	white-space: normal !important;
+}
+
+
+.borderButtom1{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.relative{
+	position: relative;
+}
+
+.deleteLine{
+	text-decoration:line-through;
+}
+
+.priorityClicks{
+	position: relative;
+	z-index: 5;
+}
+
+/* 字体大小 */
+.h1 {
+	font-size: 36upx !important;  /* 用在少数重要标题,如导航标题 */
+}
+
+.h2 {
+	font-size: 32upx !important; /* 用在一些较为重要的文字标题或操作按钮，如搜索也模块名称、首页tab名称、上导航文字按钮*/
+}
+
+.h3 {
+	font-size: 30upx !important;/* 用于大多数文字，如正文内容  */
+}
+
+.h4 {
+	font-size: 28upx !important;/* 用在大多数文字，如昵称、评论内容*/
+}
+
+.h5 {
+	font-size: 24upx !important;/* 用在辅助性文字，如次要的来自、次要的文案说明*/
+}
+
+.h6 {
+	font-size: 20upx !important;/* 用在辅助性文字，如时间信息*/
+}
+
+.font-weight{
+	font-weight: bold;
+}
+
+.size100 {
+	font-size: 100upx !important;
+}
+
+.size80 {
+	font-size: 80upx;
+}
+
+.size72 {
+	font-size: 72upx !important;
+}
+
+.size60 {
+	font-size: 60upx !important;
+}
+
+.size52 {
+	font-size: 52upx !important;
+}
+
+.size42 {
+	font-size: 42upx !important;
+}
+
+.size40 {
+	font-size: 40upx !important;
+}
+
+.size36 {
+	font-size: 36upx !important;
+}
+
+.size34 {
+	font-size: 34upx !important;
+}
+
+.size32 {
+	font-size: 32upx !important;
+}
+
+.size24 {
+	font-size: 24upx !important;
+}
+
+.size22 {
+	font-size: 22upx !important;
+}
+
+.cu-btn.xs {
+	padding: 0 20rpx;
+	font-size: 20rpx;
+	height: 60rpx;
+}
+
+.bg-gray.xs {
+	padding: 8rpx 20rpx;
+	font-size: 20rpx;
+	height: 60rpx;
+}
+
+.titleSize1 {
+	font-size: 32upx !important;
+	color: #333333;
+	font-weight: bold;
+}
+
+.titleSize2 {
+	font-size: 32upx !important;
+	color: #F25846;
+	font-weight: bold;
+}
+
+.titleSize3 {
+	font-size: 28upx !important;
+	color: #333333;
+	font-weight: bold;
+}
+
+.textSize1 {
+	font-size: 28upx !important;
+	color: #333333;
+}
+
+.textSize2 {
+	font-size: 28upx !important;
+	color: #666666;
+}
+
+.textSize3 {
+	font-size: 24upx !important;
+	color: #333333;
+}
+
+.labelSize1 {
+	font-size: 24upx !important;
+	color: #666666;
+}
+
+.labelSize2 {
+	font-size: 24upx !important;
+	color: #BFBFBF;
+}
+
+.labelSize3 {
+	font-size: 20upx !important;
+	color: #333333;
+}
+/* 背景 */
+.ffs-bg-blue{
+	background-color: #0081ff !important;
+}
