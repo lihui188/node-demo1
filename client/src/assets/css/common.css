@@ -2,25 +2,27 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: url("../images/bg_login.jpg") no-repeat center center;
+    /* background: url("../images/bg_login.jpg") no-repeat center center; */
+    background-color: #000;
     background-size: 100% 100%;
   }
   .register {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url("../images/bg_register.jpg") no-repeat center center;
+    /* background: url("../images/bg_register.jpg") no-repeat center center; */
+    background-color: #000;
     background-size: 100% 100%;
   }
   .form-container {
     width: 370px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255,1);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 10px 3px #fff;
+    /* box-shadow: 0px 0px 10px 3px #fff; */
   }
   .form-container .manage_tip {
     margin: 20px;
@@ -28,7 +30,6 @@
     color: #000;
   }
   .form-container .manage_tip .title {
-    font-family: "Microsoft YaHei";
     font-weight: bold;
   }
   .submit-btn {

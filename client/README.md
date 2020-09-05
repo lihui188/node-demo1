@@ -28,3 +28,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### 加载动画，消息提醒
 - 加载动画需要在配置拦截器中进行使用
 - 登录，注册成功进行跳转。```this.$router.push(name);```
+
+### 路由守卫 token过期处理
+- 

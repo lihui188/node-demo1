@@ -9,7 +9,7 @@ Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    redirect:'/index',
+    redirect:'/login',
   },{
     path:'/index',
     name:'index',
@@ -36,4 +36,14 @@ const router = new VueRouter({
   routes
 })
 
+
+// 路由守卫
+router.beforeEach((to,from,next)=>{
+  const isLogin = JSON.parse(localStorage.getItem('eletoken')) ? true : false;
+  if(to.path == '/login' || to.path == '/register'){
+    next();
+  }else{
+    isLogin?next():next('/login');
+  }
+})
 export default router

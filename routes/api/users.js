@@ -17,7 +17,7 @@ const User = require("../../models/User")
 router.post("/register", (req, res) => {
   User.findOne({ email: req.body.email }).then((user) => {
     if (user) {
-      return res.status(400).json("邮箱已被注册")
+      return res.status(400).json({msg:"邮箱已被注册"})
     } else {
       const avatar = gravatar.url(req.body.email, {
         s: "200",
@@ -57,7 +57,7 @@ router.post("/login", (req, res) => {
   // 查询数据库
   User.findOne({ email }).then((user) => {
     if (!user) {
-      return res.status(404).json("用户不存在")
+      return res.status(404).json({msg:"用户不存在"})
     }
     // 如果存在user，进行密码匹配
     bcrypt.compare(password, user.password).then((isMatch) => {
@@ -69,7 +69,7 @@ router.post("/login", (req, res) => {
           avatar: user.avatar,
           identity: user.identity,
         }
-        jwt.sign(rule, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
+        jwt.sign(rule, keys.secretOrKey, { expiresIn: 10 }, (err, token) => {
           if (err) throw err
           res.json({
             success: true,

@@ -12,11 +12,11 @@
           style="margin-top:20px;"
           size="medium"
         >
-          <el-form-item label="用户名" prop="name">
+          <el-form-item label="邮箱" prop="email">
             <el-input
-              v-model="loginUser.name"
+              v-model="loginUser.email"
               autocomplete="off"
-              placeholder="请输入用户名"
+              placeholder="请输入邮箱"
             ></el-input>
           </el-form-item>
           <el-form-item label="密码" prop="password">
@@ -36,12 +36,21 @@
             >
           </el-form-item>
         </el-form>
-        <div class="text-right">你好</div>
+        <div class="text-right">
+          还没有账号，现在<router-link
+            to="/register"
+            class="text-blue font-weight"
+            style="text-decoration: none;"
+            >注册</router-link
+          >
+        </div>
       </div>
     </section>
   </div>
 </template>
 <script>
+// 解析token
+import jwt_decode from 'jwt-decode'
 export default {
   name: "login",
   component: {},
@@ -50,22 +59,22 @@ export default {
       if (value === "") {
         callback(new Error("请输入密码"))
       } else {
-        if (this.loginUser.password2 !== "") {
-          this.$refs.loginFrom.validateField("password2")
-        }
         callback()
       }
     }
     return {
       loginUser: {
-        name: "",
+        email: "",
         password: "",
-
       },
       rules: {
-        name: [
-          { required: true, message: "用户名不能为空", trigger: "blur" },
-          { min: 2, max: 16, message: "长度在2-30个字符之间", trigger: "blur" },
+        email: [
+          {
+            type: "email",
+            required: true,
+            message: "邮箱格式不正确",
+            trigger: "blur",
+          },
         ],
         password: [
           { required: true, validator: validatePass, trigger: "blur" },
@@ -78,22 +87,25 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$axios
-            .post("/api/users/login", this.loginUser)
-            .then((res) => {
-              // 注册成功
-              this.$message({
-                message: "账号登录成功！",
-                type: "success",
-              })
+          this.$axios.post("/api/users/login", this.loginUser).then((res) => {
+            console.log(res)
+            // token存储到本地
+            const { token } = res.data;
+            localStorage.setItem('eletoken',JSON.stringify(token));
+            // 解析token
+            const decoded = jwt_decode(token);
+            console.log(decoded);
+            // 注册成功
+            this.$message({
+              message: "账号登录成功！",
+              type: "success",
             })
-            this.$router.push('/index');
+            this.$router.push("/index")
+          })
         }
       })
     },
   },
 }
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>
