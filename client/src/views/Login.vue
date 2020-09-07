@@ -88,13 +88,16 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           this.$axios.post("/api/users/login", this.loginUser).then((res) => {
-            console.log(res)
             // token存储到本地
             const { token } = res.data;
             localStorage.setItem('eletoken',JSON.stringify(token));
             // 解析token
             const decoded = jwt_decode(token);
-            console.log(decoded);
+            // token存储到vuex中
+            this.$store.dispatch('setAuthenticated',!this.isEmpty(decoded));
+            this.$store.dispatch('setUser',decoded);
+
+
             // 注册成功
             this.$message({
               message: "账号登录成功！",
@@ -105,6 +108,11 @@ export default {
         }
       })
     },
+    isEmpty(value){
+      return (
+        value === undefined || value === null || (typeof value === 'object'&&Object.keys(value).length === 0) || (typeof value === 'string' && value.trim().length === 0)
+      )
+    }
   },
 }
 </script>
