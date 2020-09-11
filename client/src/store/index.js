@@ -31,6 +31,10 @@ const actions = {
   },
   setUser:({commit},user)=>{
     commit(type.SET_USER,user);
+  },
+  clearCurrentState:({commit})=>{
+    commit(type.SET_AUTHENTICATED,false);
+    commit(type.SET_USER,null);
   }
 }
 const modules = {

@@ -13,7 +13,18 @@ Vue.use(VueRouter)
   },{
     path:'/index',
     name:'index',
-    component:Index
+    component:Index,
+    children:[
+      {
+        path:'',
+        component:()=>import('../components/Home.vue')
+      },
+      {
+        path:'/home',
+        name:'home',
+        component:()=>import('../components/Home.vue')
+      }
+    ]
   },{
     path:'/register',
     name:'register',
