@@ -47,7 +47,7 @@ export default {
       }
     },
     showInfoList() {
-      this.$message("click on item " + "info")
+      this.$router.push("/infoshow")
     },
     logout() {
       localStorage.removeItem('eletoken');

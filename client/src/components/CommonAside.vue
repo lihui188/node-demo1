@@ -43,7 +43,30 @@
 export default {
   name: "commod-aside",
   data() {
-    return {}
+    return {
+      items:[
+        {
+          label:'首页',
+          name:'home',
+          icon:'home',
+          path:'/'
+        },
+        {
+          label:'首页',
+          name:'home',
+          icon:'home',
+          path:'/',
+          children:[
+            {
+              path:'/fundList',
+              name:'fundList',
+              icon:'',
+              label:'资金管理'
+            }
+          ]
+        },
+      ]
+    }
   },
   created() {},
   methods: {

@@ -33,6 +33,10 @@ Vue.use(VueRouter)
     path:'/login',
     name:'login',
     component:Login
+  },{
+    path:'/infoshow',
+    name:'login',
+    component:()=>import('../views/InfoShow.vue')
   }
   ,{
     path:'*',

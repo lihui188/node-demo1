@@ -1,6 +1,6 @@
 <template>
     <div>
-        nihoa1
+        
     </div>
 </template>
 <script>
